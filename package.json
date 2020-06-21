@@ -1,0 +1,18 @@
+{
+  "name": "Fase04",
+  "version": "1.0.0",
+  "description": "Projeto da Fase 04 do Bootcamp Launchbase",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "author": "Rafael Andrade",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nunjucks": "^3.2.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}
