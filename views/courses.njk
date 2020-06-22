@@ -11,38 +11,19 @@
 {% block content %}
 
     <div class="cards">
-        <div class="card" id="starter">
-            <div class="imgBox" >
-                <img src="https://skylab.rocketseat.com.br/static/64c237ccff807c054339a62d53b4b402.svg" alt="">
+        
+        {% for course in courses %}
+            <div class="card" id="starter">
+                <div class="imgBox" >
+                    <img src="{{course.img}}" alt="imagem de {{course.id}}">
+                </div>
+                <p>{{course.description}}</p>
+                <div class="info-grid">
+                    <span>{{course.modules}}</span>
+                    <span>{{course.price}}</span>
+                </div>
             </div>
-            <p>Torne-se um programador desejado no mercado com esses cursos gratuitos</p>
-            <div class="info-grid">
-                <span>5 Módulos</span>
-                <span>Free</span>
-            </div>
-        </div>
-        <div class="card" id="launchbase">
-            <div class="imgBox">
-                <img src="https://skylab.rocketseat.com.br/static/0828532024cb46921a6b5e941f8d788d.svg" alt="">
-            </div>
-            <p>Domine a programação do zero e tenha acesso às melhores oportunidades do mercado</p>
-            <div class="info-grid">
-                <span>5 Módulos</span>
-                <span>PAGO</span>
-            </div>
-        </div>
-        <div class="card" id="gostack">
-            <div class="imgBox">
-                <img src="https://skylab.rocketseat.com.br/static/83a178a0653dab1d55e2ed7946465975.svg" alt="">
-            </div>
-            <p>Treinamento imersivo nas tecnologias mais modernas de desenvolvimento web e mobile.</p>
-            <div class="info-grid">
-                <span>5 Módulos</span>
-                <span>PAGO</span>
-            </div>
-        </div>
-
-
+        {%endfor%}
 
         <div class="modal-overlay">
             <div class="modal">
