@@ -28,6 +28,20 @@ server.get("/", function (req, res) {
     return res.render ("courses", {courses});
 })
 
+server.get("/courses/:id", function(req, res) {
+    const id = req.params.id;
+    
+    const course = courses.find(function(course){
+        return course.id == id;
+    })
+
+    if (!course) {
+        res.send('Course not found!');
+    }
+
+    res.render ("course", {course} );
+});
+
 server.get("/about", function (req, res) {
     server.use(function(req, res) {
         res.status(404).render("not-found");

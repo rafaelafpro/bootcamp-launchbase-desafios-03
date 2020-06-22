@@ -2,18 +2,15 @@
 
 
 {% block head %}
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
-    <title>Cursos</title>
+    <title>Curso </title>
 {% endblock %}
 
 
 {% block content %}
 
-    <div class="cards">
-        
-        {% for course in courses %}
-            <div class="card" id="{{course.id}}">
+    <a href="http://www.rocketseat.com.br/{{course.id}}" target="_blank" rel="noopener noreferrer">
+        <div class="card-wrapper">
+            <div class="course-card" id="starter">
                 <div class="imgBox" >
                     <img src="{{course.img}}" alt="imagem de {{course.id}}">
                 </div>
@@ -23,7 +20,8 @@
                     <span>{{course.price}}</span>
                 </div>
             </div>
-        {%endfor%}
+         </div>
+    </a>
 
 
     <script src="script.js"></script>

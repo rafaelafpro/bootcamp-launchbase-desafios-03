@@ -131,90 +131,33 @@ body {
     gap: 20px;
 }
 
-.cards .card {
+.card {
     background-color: rgba(255, 255, 255, 0.13);
     text-align: center;
     padding: 40px;
     border-radius: 10px;
 }
 
-.cards .card:hover{
+.card:hover{
     cursor: pointer;
     border: 2px solid gray;
 }
 
-.cards .card p {
+.card p {
     margin: 50px 0;
 }
 
-.cards .card .info-grid{
+.card .info-grid{
     display: grid;
     grid-template-columns: 1fr 1fr;
     text-align: center;
     gap: 5px;
 }
 
-.cards .card .info-grid span {
+.card .info-grid span {
     background-color: var(--color-purple);
     border-radius: 10px;
     line-height: 40px;
-}
-
-
-/*=== modal ====*/
-
-.modal-overlay {
-    position: fixed;
-    top: 0;
-    right: 0;
-    background-color: rgba(0, 0, 0, 0.76);
-    width: 100%;
-    height: 100%;
-    visibility: hidden;
-}
-
-
-.modal-overlay.active {
-    visibility: visible;
-}
-
-
-.modal {
-    width: 80%;
-    background-color: white;
-    height: 90%;
-    border-radius: 10px;
-    position: relative;
-    margin: 5vh auto;
-}
-
-
-.modal.maximize{
-    width: 100%;
-    height: 100%;
-    margin: 0;
-}
-
-.modal .material-icons {
-    color: black;
-}
-
-.modal .modal-controls {
-    position: absolute;
-    right: 10px;
-    top: 10px;
-    display: flex;
-    flex-direction: row-reverse;
-}
-
-.modal .modal-controls:hover{
-    cursor:pointer;
-}
-
-iframe {
-    padding-top: 40px;
-    width: 100%;
-    height: 100%;
 }
 
 
@@ -229,4 +172,41 @@ iframe {
 .wrapper-404 img {
     margin-top: 100px;
     width: 100%;
+}
+
+/* ==== COURSES ===== */
+
+
+.card-wrapper {
+    width: 60%;
+    margin: 5vh auto;
+}
+
+.course-card {
+    background-color: rgba(255, 255, 255, 0.13);
+    text-align: center;
+    padding: 40px;
+    border-radius: 10px;
+}
+
+.course-card:hover{
+    cursor: pointer;
+    border: 2px solid gray;
+}
+
+.course-card p {
+    margin: 50px 0;
+}
+
+.course-card .info-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-align: center;
+    gap: 5px;
+}
+
+.course-card .info-grid span {
+    background-color: var(--color-purple);
+    border-radius: 10px;
+    line-height: 40px;
 }
